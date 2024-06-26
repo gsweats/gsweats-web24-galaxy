@@ -27,34 +27,35 @@ export interface SiteDataProps {
 
 // Update this file with your site specific information
 const siteData: SiteDataProps = {
-  name: "Dalyle DevOps Inc.",
+  name: "GSweats",
   // Your website's title and description (meta fields)
   title:
-    "Dalyle - an attempt to solving the state of web dev since 2019.",
+    "GSweats.ca (a.k.a. GregSweats, Greg Stevens, etc.)",
   description:
     "",
   useViewTransitions: true,
   useAnimations: true,
   // Your information!
   author: {
-    name: "Dalyle DevOps Inc.",
-    email: "hello@dalyle.ca",
-    twitter: "DDOINC",
+    name: "GSweats",
+    email: "holla@gsweats.ca",
+    // todo: Find out why twitter is here? and repeat of name?
+    twitter: "gsweatsss",
   },
 
   // default image for meta tags if the page doesn't have an image already
   defaultImage: {
     src: "/images/cosmic-themes-logo.jpg",
-    alt: "Cosmic Themes logo",
+    alt: "GSweats Logo (default meta tag from siteData.json.ts)",
   },
 
   // Google Analytics (GA) & Google Tag Manager (GTM)
   analytics: {
     ga: {
-      measurementId: "G-48XHG9PY02"
+      measurementId: "G-35X6WN2E63"
     },
     gtm: {
-      id: "GTM-5M6DTVZT"
+      id: "GTM-PQJNM999"
     }
   }
 

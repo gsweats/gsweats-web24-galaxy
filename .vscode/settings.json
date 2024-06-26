@@ -6,6 +6,7 @@
         "vercel",
         "blog",
         "analytics",
-        "keystatic-cms"
+        "keystatic-cms",
+        "brand"
     ]
 }
