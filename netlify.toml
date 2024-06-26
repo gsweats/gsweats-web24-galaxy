@@ -1,3 +1,8 @@
+###
+# WARNING @gsweats !!!
+# File not used for www.gsweats.ca since we use www.vercel.com instead of Netlify.
+###
+
 [dev]
   command = "npm run dev"
   framework = "astro"
