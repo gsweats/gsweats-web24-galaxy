@@ -17,8 +17,8 @@ import siteData from "@config/siteData.json";
 // authorData could also be defined on the about author page
 interface Props {
   type?: "blog" | "general";
-  title: string;
-  description: string;
+  title: string;  // becomes htmlTitle, but for tag prop simplicity makes sense as title.
+  description: string; // becomes htmlDescription, but for tag prop simplicity makes sense without html prefix.
   heroImage?: ImageMetadata;
   authorsData?: CollectionEntry<"authors">[];
   postFrontmatter?: CollectionEntry<"blog">["data"];
@@ -34,12 +34,18 @@ const {
   postFrontmatter,
   noindex = false,
 } = Astro.props as Props;
+//
+// console.debug(Astro.props);
+// console.debug(htmlTitle);
 
 // todo: This doesn't need to be here, I just don't know how to print the `id` into HTML source.
 //       ...could use `<script is:inline define:vars={{gtmId}}>`
 //       Not sure it's good in a JS variable occupying the memory/stack and risking override.
 //       as opposed to just printed to HTML.
-const gtmIframeSrc = "https://www.googletagmanager.com/ns.html?id=" + siteData.analytics.gtm.id;
+const gtmIframeSrc =
+  (siteData.analytics && siteData.analytics.gtm)
+    ? "https://www.googletagmanager.com/ns.html?id=" + siteData.analytics.gtm.id
+    : false;
 ---
 
 <!doctype html>
@@ -50,8 +56,8 @@ const gtmIframeSrc = "https://www.googletagmanager.com/ns.html?id=" + siteData.a
   <head>
     <BaseHead
       type={type}
-      title={title}
-      description={description}
+      htmlTitle={title}
+      htmlDescription={description}
       image={heroImage ? heroImage : undefined}
       authors={authorsData ? authorsData : undefined}
       postFrontmatter={postFrontmatter ? postFrontmatter : undefined}
@@ -65,12 +71,14 @@ const gtmIframeSrc = "https://www.googletagmanager.com/ns.html?id=" + siteData.a
     <!-- put cookie consent first so it is seen first by screen readers -->
     <!-- <CookieConsent /> -->
 
-    <!-- Google Tag Manager (noscript) (part2, see part1 in `BaseHead.astro`) -->
-    <noscript>
-      <iframe src={gtmIframeSrc}>
-      height="0" width="0" style="display:none;visibility:hidden"></iframe>
-    </noscript>
-    <!-- End Google Tag Manager (noscript) -->
+    {gtmIframeSrc &&
+      <!-- Google Tag Manager (noscript) (part2, see part1 in `BaseHead.astro`) -->
+      <noscript>
+        <iframe src={gtmIframeSrc}>
+        height="0" width="0" style="display:none;visibility:hidden"></iframe>
+      </noscript>
+      <!-- End Google Tag Manager (noscript) -->
+    }
 
     <!-- MAIN -->
     <div class="">

@@ -1,18 +1,24 @@
 export interface SiteDataProps {
-  name: String;
-  title: string;
-  description: string;
+  name: String; // kinda like an id... e.g. `gsweats`
+  title: string;  // A "Display Name" if you will.. e.g. `GSweats.ca`
+  htmlTitle: string;  // Default HTML Title
+  htmlDescription: string; // Default HTML Description
   useViewTransitions?: boolean;
   useAnimations?: boolean;
   author: {
     name: string;
     email: string;
-    twitter: string; // used for twitter cards when sharing a blog post on twitter
   };
   defaultImage: {
     src: string;
     alt: string;
   };
+  // used for twitter cards when sharing a blog post on twitter
+  twitter: {
+    site: string;
+    creator: string;
+  };
+
   // EXTRAS
   analytics?: {
     ga?: {
@@ -27,26 +33,30 @@ export interface SiteDataProps {
 
 // Update this file with your site specific information
 const siteData: SiteDataProps = {
-  name: "GSweats",
+  name: "GSweats.ca",
   // Your website's title and description (meta fields)
-  title:
-    "GSweats.ca (a.k.a. GregSweats, Greg Stevens, etc.)",
-  description:
-    "",
+  title: "GSweats.ca",
+  htmlTitle: "GSweats.ca (a.k.a. GregSweats, Greg Stevens, etc.)",
+  htmlDescription: "I smash buttons, then good stuff happens.",
   useViewTransitions: true,
   useAnimations: true,
   // Your information!
   author: {
     name: "GSweats",
     email: "holla@gsweats.ca",
-    // todo: Find out why twitter is here? and repeat of name?
-    twitter: "gsweatsss",
   },
 
   // default image for meta tags if the page doesn't have an image already
   defaultImage: {
-    src: "/images/cosmic-themes-logo.jpg",
+    src: "/images/gsweats-logo.jpg",
     alt: "GSweats Logo (default meta tag from siteData.json.ts)",
+  },
+
+  // sharing on twitter? preview cards...unfurl?
+  // @see `Seo.astro`
+  twitter: {
+    site: "@gsweatsss",
+    creator: "@gsweatsss",
   },
 
   // Google Analytics (GA) & Google Tag Manager (GTM)
