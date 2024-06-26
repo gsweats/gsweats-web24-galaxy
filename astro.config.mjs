@@ -19,6 +19,9 @@ export default defineConfig({
   site: "https://www.dalyle.ca",
   redirects: {
     "/admin": "/keystatic",
+      // GSWEATS REDIRECTS #important
+    '/off': '/off24',
+    '/off24': '/blog/2024-06-okotoks-film-festival-2024/',
   },
   markdown: {
     shikiConfig: {
