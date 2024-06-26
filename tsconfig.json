@@ -1,6 +1,7 @@
 {
   "extends": "astro/tsconfigs/base",
   "compilerOptions": {
+    "strict": true,
     "strictNullChecks": true,
     "allowJs": true,
     "forceConsistentCasingInFileNames": true,
@@ -8,14 +9,30 @@
     "jsxImportSource": "react",
     "baseUrl": ".",
     "paths": {
-      "@config/*": ["src/config/*"],
-      "@js/*": ["src/js/*"],
-      "@layouts/*": ["src/layouts/*"],
-      "@components/*": ["src/components/*"],
-      "@assets/*": ["src/assets/*"],
-      "@images/*": ["src/assets/images/*"],
-      "@videos/*": ["src/assets/videos/*"],
-      "@/*": ["src/*"]
+      "@config/*": [
+        "src/config/*"
+      ],
+      "@js/*": [
+        "src/js/*"
+      ],
+      "@layouts/*": [
+        "src/layouts/*"
+      ],
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@assets/*": [
+        "src/assets/*"
+      ],
+      "@images/*": [
+        "src/assets/images/*"
+      ],
+      "@videos/*": [
+        "src/assets/videos/*"
+      ],
+      "@/*": [
+        "src/*"
+      ]
     }
   }
 }
