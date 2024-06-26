@@ -24,3 +24,28 @@ pnpm-debug.log*
 
 # Local Vercel folder
 .vercel
+
+############################
+### vvv CUSTOM BELOW vvv ###
+### vvv CUSTOM BELOW vvv ###
+### vvv CUSTOM BELOW vvv ###
+############################
+
+###
+# Krita (Graphics Design)
+# .png~, .kra~, etc.
+###
+*.kra~
+*.*~
+
+###
+# Shortcuts for #HappyDevs #DevEx #DX
+# @since 2024-06-26
+###
+# I could not get this exclusion working right.
+# So, workaround below #CopyPasteSnippet
+#
+#     git add shortcuts/README.md -f
+#
+# !shortcuts/*.md
+shortcuts/*
