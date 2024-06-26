@@ -15,9 +15,9 @@ export async function GET(context) {
     // ex. you can use a stylesheet from "public/rss/styles.xsl"
     // stylesheet: "/rss/styles.xsl",
     // `<title>` field in output xml
-    title: siteData.title,
+    title: siteData.htmlTitle,
     // `<description>` field in output xml
-    description: siteData.description,
+    description: siteData.htmlDescription,
     // Pull in your project "site" from the endpoint context
     // https://docs.astro.build/en/reference/api-reference/#contextsite
     site: context.site,
