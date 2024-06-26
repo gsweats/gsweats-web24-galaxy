@@ -21,7 +21,7 @@ export default defineConfig({
     "/admin": "/keystatic",
       // GSWEATS REDIRECTS #important
     '/off': '/off24',
-    '/off24': '/blog/2024-06-okotoks-film-festival-2024/',
+    '/off24': '/blog/off24/',
   },
   markdown: {
     shikiConfig: {
