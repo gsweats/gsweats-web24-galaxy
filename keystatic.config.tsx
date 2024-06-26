@@ -26,9 +26,9 @@ export default config({
   // cloud deployment is free to sign up (up to 3 users per team)
   // docs: https://keystatic.com/docs/cloud
   // create a Keystatic Cloud account here: https://keystatic.cloud/
-  cloud: { project: "dalyle/dalyle24" },
+  cloud: { project: "gsweats/gsweats-web24-galaxy" },
   ui: {
-    brand: { name: "Dalyle DevOps Inc." },
+    brand: { name: "GSweats" },
   },
   collections: {
     /**
