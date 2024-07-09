@@ -1,7 +1,7 @@
 import { defineCollection, reference, z } from "astro:content";
 
 // Type-check frontmatter using a schema
-const blogColl = defineCollection({
+const blog = defineCollection({
   type: "content",
   schema: ({ image }) =>
     z.object({
@@ -26,7 +26,7 @@ const blogColl = defineCollection({
 });
 
 // authors
-const authorsColl = defineCollection({
+const authors = defineCollection({
   type: "content",
   schema: ({ image }) =>
     z.object({
@@ -59,7 +59,7 @@ const links = defineCollection({
 });
 
 // other pages
-const pagesColl = defineCollection({
+const otherPages = defineCollection({
   type: "content",
   schema: () =>
     z.object({
@@ -70,7 +70,7 @@ const pagesColl = defineCollection({
 });
 
 // pieces
-const piecesColl = defineCollection({
+const pieces = defineCollection({
   type: "content",
   schema: () =>
     z.object({
@@ -81,8 +81,8 @@ const piecesColl = defineCollection({
 });
 
 export const collections = {
-  blog: blogCollection,
-  authors: authorsCollection,
-  otherPages: pagesCollection,
-  pieces: piecesCollection,
+  blog: blog,
+  authors: authors,
+  otherPages: otherPages,
+  pieces: pieces,
 };
