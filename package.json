@@ -1,5 +1,12 @@
 {
-  "name": "galaxy",
+  "name": "gsweats-web24-galaxy",
+  "author": "Greg Sweats",
+  "license": "UNLICENSED",
+  "keywords": [
+    "astro-site",
+    "okotoks",
+    "okotisms"
+  ],
   "type": "module",
   "version": "0.3.0",
   "scripts": {

@@ -16,7 +16,7 @@ export default defineConfig({
       enabled: true,
     },
   }),
-  site: "https://www.dalyle.ca",
+  site: "https://www.gsweats.ca",
   redirects: {
     "/admin": "/keystatic",
       // GSWEATS REDIRECTS #important

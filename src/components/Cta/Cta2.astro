@@ -7,10 +7,10 @@
 import Button from "@components/Button/Button.astro";
 ---
 
-<section id="CTA" class="my-12 py-8 md:my-18">
+<section id="CTA2" class="md:my-18 my-12 py-8">
   <div class="container">
     <div
-      class="pricing-plan relative mx-auto h-full w-full overflow-hidden rounded-2xl bg-gradient-to-br from-primary-400 to-base-300 to-40% dark:from-primary-500 dark:to-base-600/60"
+      class="relative mx-auto h-full w-full overflow-hidden rounded-2xl bg-gradient-to-br from-primary-400 to-base-300 to-40% text-center dark:from-primary-500 dark:to-base-600/60"
     >
       <div class="relative h-full p-px">
         <div
@@ -18,7 +18,22 @@ import Button from "@components/Button/Button.astro";
         >
           <!-- inside card glow  -->
           <div
-            class="absolute left-0 top-0 -z-10 mx-auto aspect-square w-full max-w-xl -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary-600/10 blur-3xl md:-translate-x-1/4"
+            class="
+              absolute
+              left-0
+              top-0
+              -z-10
+              mx-auto
+              aspect-square
+              w-full
+              max-w-xl
+              -translate-x-1/2
+              -translate-y-1/2
+              rounded-full
+              bg-primary-600/10
+              blur-3xl
+              md:-translate-x-1/4
+            "
             aria-hidden="true"
           >
           </div>
@@ -26,21 +41,25 @@ import Button from "@components/Button/Button.astro";
           <div
             class="mx-auto grid max-w-3xl gap-8 px-4 py-20 md:grid-cols-3 md:py-24"
           >
-            <div class="md:col-span-2">
-              <div class="flex justify-start">
+            <div class="md:col-span-3">
+              <!-- <div class="flex justify-start">
                 <p class="colored-title inline">Whatsup?</p>
+              </div> -->
+              <div>
+                <Button variant="primary" href="tel:14032952848" class="mt-8 py-4 h2">
+                  Click / Tap to Call Now!
+                  <br />+1 (403) 295-2848
+                </Button>
+                <!-- <Button variant="secondary" href="/contact/">Contact&nbsp;Form</Button> -->
               </div>
-              <h2 class="h1 mt-8">Call Anytime</h2>
+              <h2 class="h1">
+                <a href="tel:14032952848"></a>
+              </h2>
               <p class="description mt-6">
-                Get help through our 24/7 hotline.
-                <br>
-                <br>
-                <a href="tel:14032952848">+1 (403) 295-2848</a>
+                <h3 class="h2 mt-8">⌚ Call Anytime</h3>
+                <h3 class="h2 mt-8">🙅‍♀️ No Guaranteed Answer</h3>
+                <h3 class="h2 mt-8">♾️ So Keep Calling/Texting!</h3>
               </p>
-            </div>
-            <div class="flex items-end justify-start md:justify-end">
-              <Button variant="primary" href="tel:14032952848" class="mx-12">Call&nbsp;Now</Button>
-              <!-- <Button variant="secondary" href="/contact/">Contact&nbsp;Form</Button> -->
             </div>
           </div>
         </div>

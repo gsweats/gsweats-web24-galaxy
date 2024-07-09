@@ -1,7 +1,7 @@
 import { defineCollection, reference, z } from "astro:content";
 
 // Type-check frontmatter using a schema
-const blogCollection = defineCollection({
+const blogColl = defineCollection({
   type: "content",
   schema: ({ image }) =>
     z.object({
@@ -26,7 +26,27 @@ const blogCollection = defineCollection({
 });
 
 // authors
-const authorsCollection = defineCollection({
+const authorsColl = defineCollection({
+  type: "content",
+  schema: ({ image }) =>
+    z.object({
+      name: z.string(),
+      avatar: image(),
+      about: z.string(),
+      email: z.string(),
+      authorLink: z.string(), // author page link. Could be a personal website, github, twitter, whatever you want
+    }),
+});
+
+/**
+ * LINKS - Outbound links to other websites of ours.
+ * Homepage, footer, etc, should evantually read from this.
+ *
+ * Taken from `landing-pad` theme :) Thanks GalaxyThemes!
+ *
+ * todo: Finish integration!
+ */
+const links = defineCollection({
   type: "content",
   schema: ({ image }) =>
     z.object({
@@ -39,7 +59,7 @@ const authorsCollection = defineCollection({
 });
 
 // other pages
-const pagesCollection = defineCollection({
+const pagesColl = defineCollection({
   type: "content",
   schema: () =>
     z.object({
@@ -50,7 +70,7 @@ const pagesCollection = defineCollection({
 });
 
 // pieces
-const piecesCollection = defineCollection({
+const piecesColl = defineCollection({
   type: "content",
   schema: () =>
     z.object({
